@@ -1,3 +1,11 @@
+- 刷脸支付
 
-* [首页](zh-cn/)
-* [指南](zh-cn/guide)
+  - [Quick start](facepay.md)
+  - [部署](linux.md)
+
+
+
+		
+	
+
+
