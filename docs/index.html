@@ -44,7 +44,7 @@
 		  //   '/zh-cn/': '搜索',
 		  //   '/': 'Type to search'
 		  // },
-		  noData: 'No Results!',          // 找不到结果文字提示，支持本地化，例子在下面
+		  noData: '找不到结果',          // 找不到结果文字提示，支持本地化，例子在下面
 		  // noData: {
 		  //   '/zh-cn/': '找不到结果',
 		  //   '/': 'No Results'
@@ -55,7 +55,26 @@
 		    buttonText : '点击复制',
 		    errorText  : '错误',
 		    successText: '已复制'
-		}
+		},
+		plugins: [
+			function (hook, vm) {
+			  hook.beforeEach(function (html) {
+				if (/githubusercontent\.com/.test(vm.route.file)) {
+				  url = vm.route.file
+					.replace('raw.githubusercontent.com', 'github.com')
+					.replace(/\/master/, '/blob/master')
+				} else {
+				  url = 'https://github.com/docsifyjs/docsify/blob/master/docs/' + vm.route.file
+				}
+				var editHtml = '[:memo: Edit Document](' + url + ')\n'
+	
+				return editHtml
+				  + html
+				  + '\n\n----\n\n'
+				  + '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
+			  })
+			} 
+		]
     }
 	
   </script>
