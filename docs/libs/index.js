@@ -19,9 +19,9 @@ window.$docsify = {
  // executeScript: true,
   // coverpage: false,
   loadNavbar: true,//加载自定义导航栏
-  loadSidebar: true,//定制侧边栏
+  loadSidebar: false,//定制侧边栏
   autoHeader: true,
-  subMaxLevel: 2,//自定义侧边栏后默认不会再生成目录
+  subMaxLevel: 6,//自定义侧边栏后默认不会再生成目录
   auto2top: true,//切换页面后是否自动跳转到页面顶部。
   search: {
   	maxAge: 86400000,               // 过期时间，单位毫秒，默认一天
