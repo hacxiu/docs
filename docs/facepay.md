@@ -4,6 +4,18 @@
 
 # 小程序配置
 
+> [官网](https://mp.weixin.qq.com/)
+
+## 通用配置
+
+ ![image-20200513170602497](K:\Project\sourceTree\docs\docs\static\image-20200513170602497.png)
+
+
+
+![image-20200513171004649](.\static\image-20200513171004649.png)
+
+以上为微信小程序 appid 、小程序密钥、服务器域名配置地方。 
+
 ## 微信小程序
 
 ### 商户端
@@ -11,6 +23,12 @@
 ### 管理端
 
 ### 会员端
+
+商户账号登录pc,点击左侧菜单中的会员管理，点击会员配置，找到微信相关部分，填写相关配置信息如图：
+
+![image-20200513171724376](./static\image-20200513171724376.png)
+
+![image-20200513172048464](.\static\image-20200513172048464.png)
 
 ## 支付宝小程序
 
@@ -22,10 +40,13 @@
 
 ### 配置路径
 
-- 安装路径
-  - `/www/server/nginx`
-- 代理路径 
-  - `/www/server/panel/vhost/nginx`
+安装路径
+
+`/www/server/nginx`
+
+代理路径 
+
+`/www/server/panel/vhost/nginx`
 
 ### 代理配置
 
