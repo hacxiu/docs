@@ -16,7 +16,7 @@ window.$docsify = {
   repo: 'hacxiu/docs',
   routerMode: 'hash', // default: 'hash' history
   // relativePath: true,
-  executeScript: true,
+ // executeScript: true,
   // coverpage: false,
   loadNavbar: true,//加载自定义导航栏
   loadSidebar: true,//定制侧边栏
