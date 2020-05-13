@@ -23,13 +23,13 @@ window.$docsify = {
   autoHeader: true,
   subMaxLevel: 2,//自定义侧边栏后默认不会再生成目录
   auto2top: true,//切换页面后是否自动跳转到页面顶部。
-  
   search: {
-	maxAge: 86400000,               // 过期时间，单位毫秒，默认一天
-	paths: 'auto',                   // or 'auto'，匹配文件路径
-	placeholder: '搜索',  // 搜索提示框文字， 支持本地化，例子在下面
-	noData:  '找不到结果!' 
+  	maxAge: 86400000,               // 过期时间，单位毫秒，默认一天
+  	paths: 'auto',                   // or 'auto'，匹配文件路径
+  	placeholder: '搜索',  // 搜索提示框文字， 支持本地化，例子在下面
+  	noData:  '找不到结果!' 
   },
+
   copyCode: {
       buttonText : '点击复制',
       errorText  : '错误',
@@ -37,8 +37,7 @@ window.$docsify = {
   }, 
   plugins: [
     function(hook, vm) {
-      hook.beforeEach(function (html) {
-		console.log("vm.route.file",vm.route.file);
+      hook.beforeEach(function (html) { 
 		if (/githubusercontent\.com/.test(vm.route.file)) {
 		  url = vm.route.file
 			.replace('raw.githubusercontent.com', 'github.com')
@@ -53,15 +52,13 @@ window.$docsify = {
 		  + '<div class="gitalkbox"></div>'
 		  + '\n\n----\n\n'
 		  + '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
-      })
+      });
 
       hook.doneEach(function(){
         var label, domObj, main, divEle, gitalk;
         label = vm.route.path.split('/').join('');
-        domObj = Docsify.dom;
-		console.log(domObj);
-        main = domObj.getNode("#main");
-		console.log(main);
+        domObj = Docsify.dom; 
+        main = domObj.getNode("#main"); 
         /**
          * render gittalk
          */
@@ -73,7 +70,7 @@ window.$docsify = {
         domObj.appendTo(domObj.find(".gitalkbox"), divEle);
         gitalk = new Gitalk(Object.assign(gitalkConfig, {id: !label ? "/" : label})) 
         gitalk.render('gitalk-container-' + label)
-      })
+      });
     }
   ]
 }
