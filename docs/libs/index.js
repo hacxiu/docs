@@ -28,9 +28,7 @@ window.$docsify = {
 	maxAge: 86400000,               // 过期时间，单位毫秒，默认一天
 	paths: 'auto',                   // or 'auto'，匹配文件路径
 	placeholder: '搜索',  // 搜索提示框文字， 支持本地化，例子在下面
-	noData: {
-		'/': '找不到结果!'
-	}, 
+	noData:  '找不到结果!' 
   },
   copyCode: {
       buttonText : '点击复制',
