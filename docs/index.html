@@ -11,9 +11,7 @@
   <style>
 	  #gitalk-container{max-width: 750px;margin:20px  auto;}
   </style>
-  <!-- 评论系统。 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  
 </head>
 <body>
   <div id="app">加载中...</div>
@@ -70,6 +68,7 @@
 	
 				return editHtml
 				  + html
+				  + '<div id="gitalk-container"></div>'
 				  + '\n\n----\n\n'
 				  + '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
 			  })
@@ -86,8 +85,11 @@
 	<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 	<!--复制到剪贴板  -->
 	<script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+	<!-- 评论系统。 -->
+	<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 	
-	<!-- <script>
+	<script>
 		const gitalk = new Gitalk({
 			clientID: 'b84b30ee7f719ed84b87',
 			clientSecret: 'c2158868b3aebc50f8c65a294d20db4b348cdf20',
@@ -99,6 +101,6 @@
 			distractionFreeMode: false
 		  })
 		  gitalk.render('gitalk-container')
-	</script> -->
+	</script>
 </body>
 </html>
