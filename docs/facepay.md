@@ -8,7 +8,7 @@
 
 ## 通用配置
 
- ![image-20200513170602497](K:\Project\sourceTree\docs\docs\static\image-20200513170602497.png)
+ ![image-20200513170602497](.\static\image-20200513170602497.png)
 
 
 
