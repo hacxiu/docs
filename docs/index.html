@@ -8,9 +8,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-  <style>
-	  #gitalk-container{max-width: 750px;margin:20px  auto;}
-  </style>
+   
   
 </head>
 <body>
@@ -18,65 +16,7 @@
   
   
   
-  <script>
-	  
-    window.$docsify = {
-      name: 'docs', 
-	  nameLink: '/',
-	  repo: 'hacxiu/docs',
-	   routerMode: 'hash', // default: 'hash' history
-	  // relativePath: true,
-	   executeScript: true,
-	  // coverpage: false,
-	    loadNavbar: true,//加载自定义导航栏
-	    loadSidebar: true,//定制侧边栏
-		autoHeader: true,
-	  subMaxLevel: 2,//自定义侧边栏后默认不会再生成目录
-	  auto2top: true,//切换页面后是否自动跳转到页面顶部。
-	   // 完整配置参数
-		search: {
-		  maxAge: 86400000,               // 过期时间，单位毫秒，默认一天
-		  paths: 'auto',                   // or 'auto'，匹配文件路径
-		  placeholder: '搜索',  // 搜索提示框文字， 支持本地化，例子在下面
-		  // placeholder: {
-		  //   '/zh-cn/': '搜索',
-		  //   '/': 'Type to search'
-		  // },
-		  noData: '找不到结果',          // 找不到结果文字提示，支持本地化，例子在下面
-		  // noData: {
-		  //   '/zh-cn/': '找不到结果',
-		  //   '/': 'No Results'
-		  // },
-		  //depth: 2,                       // 搜索标题的最大程级, 1 - 6
-		},
-		copyCode: {
-		    buttonText : '点击复制',
-		    errorText  : '错误',
-		    successText: '已复制'
-		},
-		plugins: [
-			function (hook, vm) {
-			  hook.beforeEach(function (html) {
-				if (/githubusercontent\.com/.test(vm.route.file)) {
-				  url = vm.route.file
-					.replace('raw.githubusercontent.com', 'github.com')
-					.replace(/\/master/, '/blob/master')
-				} else {
-				  url = 'https://github.com/hacxiu/docs/blob/master/docs/' + vm.route.file
-				}
-				var editHtml = '[:memo: Edit Document](' + url + ')\n'
-	
-				return editHtml
-				  + html
-				  + '<div id="gitalk-container"></div>'
-				  + '\n\n----\n\n'
-				  + '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
-			  })
-			} 
-		]
-    }
-	
-  </script>
+ 
   
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <!-- 全文搜索 -->
@@ -88,19 +28,7 @@
 	<!-- 评论系统。 -->
 	<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-	
-	<script>
-		const gitalk = new Gitalk({
-			clientID: 'b84b30ee7f719ed84b87',
-			clientSecret: 'c2158868b3aebc50f8c65a294d20db4b348cdf20',
-			repo: 'docs',
-			owner: 'hacxiu',
-			admin: ['hacxiu'],
-			id: location.pathname,    
-			// facebook-like distraction free mode
-			distractionFreeMode: false
-		  })
-		  gitalk.render('gitalk-container')
-	</script>
+	<script src="./libs/index.js"></script>
+ 
 </body>
 </html>
